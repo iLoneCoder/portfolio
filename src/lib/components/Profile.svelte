@@ -1,8 +1,7 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
     import linkedin from "$lib/assets/svg/linkedin.svg";
     import github from "$lib/assets/svg/github.svg";
-
+    import Button from "$lib/util-components/Button.svelte";
 
 </script>
 
@@ -21,8 +20,8 @@
         <p class="profile-text-two">Fullstack Developer</p>
         
         <div class="btn-container">
-            <button class="download-btn" on:click={() => window.open("/src/lib/assets/files/CV_Giorgi_Shagidze.pdf", "_blank")}>Download CV</button>
-            <button class="contact-btn">Contact info</button>
+            <Button on:click={() => window.open("/src/lib/assets/files/CV_Giorgi_Shagidze.pdf", "_blank")}>Download CV</Button>
+            <Button type={"secondary"}>Contact info</Button>
         </div>
         
         <div class="socials-container">
@@ -84,35 +83,6 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
-    }
-
-    .btn-container button {
-        font-weight: 500;
-        font-size: 0.85rem;
-        transition: all 300ms ease;
-        padding: 0.80rem 1rem;
-        width: 8rem;
-        border-radius: 2rem;
-        cursor: pointer;
-    }
-
-    .download-btn {
-        background-color: transparent;
-        border: 1px solid black;
-    }
-
-    .contact-btn {
-        background-color: rgb(53, 53, 53);
-        color: #fff;
-    }
-
-    .download-btn:hover {
-        background-color: black;
-        color: #fff;
-    }
-
-    .contact-btn:hover {
-        background-color: #000;
     }
 
     .socials-container {

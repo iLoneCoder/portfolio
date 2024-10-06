@@ -58,9 +58,7 @@
 <section class="experience">
     <p>Explore My</p>
     <h2>Experience</h2>
-    <div >
 
-    </div>
     <div class="experience-container">
         <div class="details">
             <h2>Frontend stack</h2>
