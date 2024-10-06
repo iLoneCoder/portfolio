@@ -8,7 +8,7 @@
     }
 </script>
 
-<header>
+<header id="header">
     <div class="desktop-header">
         <div class="logo">
             <a href="/">Home</a>
@@ -16,10 +16,9 @@
     
         <nav class="nav-container">
             <ul class="nav-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#experience" class="navigation-link">Experience</a></li>
+                <li><a href="#projects" class="navigation-link">Projects</a></li>
+                <li><a href="#contacts" class="navigation-link">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -36,10 +35,9 @@
             {#if mobileMenuExtend}
                 <nav class="mob-nav-container" transition:slide>
                     <ul class="nav-list_mob">
-                        <li><a href="#">Experience</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contacts">Contact</a></li>
                     </ul>
                 </nav>
             {/if}
@@ -79,8 +77,6 @@
 
     .nav-list li a{
         font-size: 1.5rem;
-        color: #000;
-        text-decoration: none;
     }
 
     .humburger-menu_container {

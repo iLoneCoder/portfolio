@@ -1,7 +1,5 @@
 <script lang="ts">
     export let show = false
-    console.log("show: ", show)  
-    
 </script>
 
 <div class:show={show}>

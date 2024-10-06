@@ -57,7 +57,7 @@
 </script>
 
 
-<section class="experience">
+<section id="experience" class="experience">
     <p>Explore My</p>
     <h2>Experience</h2>
 

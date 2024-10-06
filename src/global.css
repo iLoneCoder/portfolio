@@ -9,3 +9,17 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.navigation-link {
+    text-decoration: none;
+    text-decoration-color: #fff;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.navigation-link:hover {
+    color: grey;
+    text-decoration: underline;
+    text-decoration-color: grey;
+    text-underline-offset: 1rem;
+}

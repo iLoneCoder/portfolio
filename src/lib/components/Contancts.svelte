@@ -72,11 +72,14 @@
         font-size: 1.2rem;
         cursor: pointer;
         transition: all 0.30s;
+        text-decoration: none;
+        text-decoration-color: #fff;
     }
 
     .linkedin a {
         margin-left: 5px;
         text-decoration: none;
+        text-decoration-color: #fff;
         color: #000;
         font-size: 1.2rem;
         transition: all 0.30s ease;

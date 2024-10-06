@@ -2,37 +2,42 @@
     import linkedin from "$lib/assets/svg/linkedin.svg";
     import github from "$lib/assets/svg/github.svg";
     import Button from "$lib/util-components/Button.svelte";
+    import StackCarousel from "$lib/util-components/StackCarousel.svelte";
 
 </script>
 
-<section class="profile">
-    <div class="img-container">
-        <picture>
-            <source srcset="/src/lib/assets/images/me.webp" type="image/webp">
-            <source srcset="/src/lib/assets/images/me.jpg" type="image/jpg">
-            <img src="/src/lib/assets/images/me.jpg" alt="me">
-        </picture>
+<section >
+    <div class="profile">
+        <div class="img-container">
+            <picture>
+                <source srcset="/src/lib/assets/images/me.webp" type="image/webp">
+                <source srcset="/src/lib/assets/images/me.jpg" type="image/jpg">
+                <img src="/src/lib/assets/images/me.jpg" alt="me">
+            </picture>
+        </div>
+    
+        <div class="profile-data">
+            <p class="profile-text-one">Hello, I'm</p>
+            <h1 class="profile-text-title">Giorgi Shagidze</h1>
+            <p class="profile-text-two">Fullstack Developer</p>
+            
+            <div class="btn-container">
+                <Button on:click={() => window.open("/src/lib/assets/files/CV_Giorgi_Shagidze.pdf", "_blank")}>View CV</Button>
+                <Button type={"secondary"}>Contact info</Button>
+            </div>
+            
+            <div class="socials-container">
+                <a href="https://www.linkedin.com/in/giorgi-shagidze-716623218/" target="_blank">
+                    <img src={linkedin} alt="linkdin">
+                </a>
+                <a href="https://github.com/iLoneCoder" target="_blank">
+                    <img src={github} alt="github">
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="profile-data">
-        <p class="profile-text-one">Hello, I'm</p>
-        <h1 class="profile-text-title">Giorgi Shagidze</h1>
-        <p class="profile-text-two">Fullstack Developer</p>
-        
-        <div class="btn-container">
-            <Button on:click={() => window.open("/src/lib/assets/files/CV_Giorgi_Shagidze.pdf", "_blank")}>Download CV</Button>
-            <Button type={"secondary"}>Contact info</Button>
-        </div>
-        
-        <div class="socials-container">
-            <a href="https://www.linkedin.com/in/giorgi-shagidze-716623218/" target="_blank">
-                <img src={linkedin} alt="linkdin">
-            </a>
-            <a href="https://github.com/iLoneCoder" target="_blank">
-                <img src={github} alt="github">
-            </a>
-        </div>
-    </div>
+    <StackCarousel />
 </section>
 
 
@@ -41,7 +46,7 @@
         display: flex;
         justify-content: center;
         gap: 5rem;
-        height: 80vh;
+        height: 78vh;
     }
 
     .img-container {
@@ -54,6 +59,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
+        filter: grayscale(1);
     }
 
     .profile-data {
@@ -101,6 +107,7 @@
             align-items: center; */
             display: block;
             padding-top: 4vh;
+            height: 74vh;
         }
 
         .img-container {
