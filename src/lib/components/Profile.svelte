@@ -3,6 +3,8 @@
     import github from "$lib/assets/svg/github.svg";
     import Button from "$lib/util-components/Button.svelte";
     import StackCarousel from "$lib/util-components/StackCarousel.svelte";
+    import meWebp from "/src/lib/assets/images/me.webp";
+    import meJpg from "/src/lib/assets/images/me.jpg"
 
 </script>
 
@@ -10,9 +12,9 @@
     <div class="profile">
         <div class="img-container">
             <picture>
-                <source srcset="/src/lib/assets/images/me.webp" type="image/webp">
-                <source srcset="/src/lib/assets/images/me.jpg" type="image/jpg">
-                <img src="/src/lib/assets/images/me.jpg" alt="me">
+                <source srcset={meWebp} type="image/webp">
+                <source srcset={meJpg} type="image/jpg">
+                <img src={meJpg} alt="me">
             </picture>
         </div>
     
