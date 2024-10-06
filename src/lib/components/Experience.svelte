@@ -1,4 +1,6 @@
 <script lang="ts">
+    import ArrowDown from "$lib/util-components/ArrowDown.svelte";
+
     let frontendTechs = [
         {
             name: "HTML",
@@ -90,6 +92,8 @@
             </div>
         </div>
     </div>
+
+    <ArrowDown id="projects"/>
 </section>
 
 
@@ -98,6 +102,7 @@
         padding-top: 4vh;
         height: 96vh;
         margin: 0 10rem;
+        position: relative;
     }
 
     .experience p {

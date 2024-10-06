@@ -3,6 +3,7 @@
     import type { EmblaCarouselType, EmblaEventType } from 'embla-carousel'
     import arrow from "$lib/assets/svg/arrow.svg";
     import Button from '$lib/util-components/Button.svelte';
+    import ArrowDown from '$lib/util-components/ArrowDown.svelte';
 
     let options = { align: "start"}
 
@@ -82,7 +83,7 @@
     }
 </script>
 
-<section class="projects">
+<section id="projects" class="projects">
     <p>Browse my projects</p>
     <h2>Projects</h2>
 
@@ -112,6 +113,8 @@
         <button on:click={onPrevButtonClick} disabled={isPrevDisabled} style="transform: rotate(-180deg);"><img src={arrow} alt="arrow-left"></button>
         <button on:click={onNextButtonClick} disabled={isNextDisabled}><img src={arrow} alt="arrow-right"></button>
     </div>
+
+    <ArrowDown id={"contacts"}/>
 </section>
 
 <style>
@@ -119,6 +122,7 @@
         padding-top: 4vh;
         height: 96vh;
         margin: 0 10rem;
+        position: relative;
     }
 
     .projects p {

@@ -10,7 +10,7 @@
     }
 </script>
 
-<section class="contacts">
+<section id="contacts" class="contacts">
     <p>Get in Touch</p>
     <h2>Contact Me</h2>
 
