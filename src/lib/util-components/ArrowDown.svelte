@@ -1,5 +1,6 @@
 <script lang="ts">
     import { goto } from "$app/navigation";
+    import arrow from "/src/lib/assets/images/arrow-down.png";
 
     export let id: string
 
@@ -10,7 +11,7 @@
 </script>
 
 <div class="arrow-down" tabindex="0" role="button" on:keydown on:click={handleClick}>
-    <img src="/src/lib/assets/images/arrow-down.png" alt="arrow down">
+    <img src={arrow} alt="arrow down">
 </div>
 
 <style>

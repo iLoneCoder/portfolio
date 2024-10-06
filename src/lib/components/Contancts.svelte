@@ -1,5 +1,7 @@
 <script lang="ts">
     import Toast from "$lib/util-components/Toast.svelte";
+    import emailImg from "/src/lib/assets/svg/email.svg";
+    import linkedin from "/src/lib/assets/svg/linkedin.svg";
 
     let email = "giorgii.shagidze@gmail.com"
     let show = false
@@ -16,12 +18,12 @@
 
     <div class="contacts-container">
         <div class="email">
-            <img src="/src/lib/assets/svg/email.svg" alt="email" width="30" height="30">
+            <img src={emailImg} alt="email" width="30" height="30">
             <div  role="button" tabindex="0" on:keydown on:click={handleEmailClick}>{email}</div>
         </div>
 
         <div class="linkedin">
-            <img src="/src/lib/assets/svg/linkedin.svg" alt="linkedin" width="30" height="30">
+            <img src={linkedin} alt="linkedin" width="30" height="30">
             <a href="https://www.linkedin.com/in/giorgi-shagidze-716623218/" target="_blank">Linkedin</a>
         </div>
     </div>

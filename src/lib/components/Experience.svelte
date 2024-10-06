@@ -1,6 +1,6 @@
 <script lang="ts">
     import ArrowDown from "$lib/util-components/ArrowDown.svelte";
-
+    import checkmark from "/src/lib/assets/images/checkmark.png";
     let frontendTechs = [
         {
             name: "HTML",
@@ -67,7 +67,7 @@
             <div class="tech-stack-box">
                 {#each frontendTechs as frontendTech, index (index)}
                     <div class="tech">
-                        <img src="/src/lib/assets/images/checkmark.png" alt="checkmark" class="icon">
+                        <img src={checkmark} alt="checkmark" class="icon">
                         <div>
                             <h3>{frontendTech.name}</h3>
                             <p>{frontendTech.level}</p>
@@ -82,7 +82,7 @@
             <div class="tech-stack-box">
                 {#each backendTechs as backendTech, index (index)}
                     <div class="tech">
-                        <img src="/src/lib/assets/images/checkmark.png" alt="checkmark" class="icon">
+                        <img src={checkmark} alt="checkmark" class="icon">
                         <div>
                             <h3>{backendTech.name}</h3>
                             <p>{backendTech.level}</p>

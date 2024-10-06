@@ -50,16 +50,8 @@
         }
     ]
     
-    function logEmblaEvent(
-        emblaApi: EmblaCarouselType,
-        eventName: EmblaEventType
-        ): void {
-        console.log(`Embla just triggered ${eventName}!`)
-
-    }
     function onInit(event: CustomEvent<EmblaCarouselType>): void {
         emblaApi = event.detail
-        emblaApi.on('slidesInView', logEmblaEvent)
     }
 
     $: {

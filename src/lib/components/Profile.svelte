@@ -1,10 +1,15 @@
 <script lang="ts">
+    import { goto } from "$app/navigation";
     import linkedin from "$lib/assets/svg/linkedin.svg";
     import github from "$lib/assets/svg/github.svg";
     import Button from "$lib/util-components/Button.svelte";
     import StackCarousel from "$lib/util-components/StackCarousel.svelte";
     import meWebp from "/src/lib/assets/images/me.webp";
     import meJpg from "/src/lib/assets/images/me.jpg"
+
+    function handleClick() {
+        goto("#contacts", {replaceState: true, noScroll: false})
+    }
 
 </script>
 
@@ -24,8 +29,8 @@
             <p class="profile-text-two">Fullstack Developer</p>
             
             <div class="btn-container">
-                <Button on:click={() => window.open("/src/lib/assets/files/CV_Giorgi_Shagidze.pdf", "_blank")}>View CV</Button>
-                <Button type={"secondary"}>Contact info</Button>
+                <Button on:click={() => window.open("/CV_Giorgi_Shagidze.pdf", "_blank")}>View CV</Button>
+                <Button on:click={handleClick} type={"secondary"}>Contact info</Button>
             </div>
             
             <div class="socials-container">
