@@ -10,7 +10,7 @@
 
 </script>
 
-<div class="arrow-down" tabindex="0" role="button" on:keydown on:click={handleClick}>
+<div class="arrow-down" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom" tabindex="0" role="button" on:keydown on:click={handleClick}>
     <img src={arrow} alt="arrow down">
 </div>
 

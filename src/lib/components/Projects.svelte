@@ -76,10 +76,10 @@
 </script>
 
 <section id="projects" class="projects">
-    <p>Browse my projects</p>
-    <h2>Projects</h2>
+    <p data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom">Browse my projects</p>
+    <h2 data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="top-bottom">Projects</h2>
 
-    <div class="embla" use:emblaCarouselSvelte="{{ options }}" on:emblaInit={onInit}>
+    <div class="embla" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom"  use:emblaCarouselSvelte="{{ options }}" on:emblaInit={onInit}>
         <div class="embla__container">
             {#each projects as project, index (index)}
                 <div class="embla__slide">
@@ -101,7 +101,7 @@
         </div>
     </div>
 
-    <div class="btn-container">
+    <div class="btn-container" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
         <button on:click={onPrevButtonClick} disabled={isPrevDisabled} style="transform: rotate(-180deg);"><img src={arrow} alt="arrow-left"></button>
         <button on:click={onNextButtonClick} disabled={isNextDisabled}><img src={arrow} alt="arrow-right"></button>
     </div>

@@ -58,10 +58,10 @@
 
 
 <section id="experience" class="experience">
-    <p>Explore My</p>
-    <h2>Experience</h2>
+    <p data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">Explore My</p>
+    <h2 data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">Experience</h2>
 
-    <div class="experience-container">
+    <div class="experience-container" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
         <div class="details">
             <h2>Frontend stack</h2>
             <div class="tech-stack-box">
@@ -77,7 +77,7 @@
             </div>
         </div>
 
-        <div class="details">
+        <div class="details" data-aos="fade-up" data-aos-duration="800" data-aos-offset="200">
             <h2>Backend stack</h2>
             <div class="tech-stack-box">
                 {#each backendTechs as backendTech, index (index)}

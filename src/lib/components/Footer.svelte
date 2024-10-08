@@ -8,7 +8,7 @@
 </script>
 
 
-<section class="footer">
+<section class="footer" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
     <div class="nav">
         <a href="#experience" class="navigation-link">Experience</a>
         <a href="#projects" class="navigation-link">Projects</a>

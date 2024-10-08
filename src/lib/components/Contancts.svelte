@@ -12,7 +12,7 @@
     }
 </script>
 
-<section id="contacts" class="contacts">
+<section id="contacts" class="contacts" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
     <p>Get in Touch</p>
     <h2>Contact Me</h2>
 
@@ -28,8 +28,8 @@
         </div>
     </div>
 
-    <Toast {show}/>
 </section>
+<Toast {show}/>
 
 <style>
     .contacts {
