@@ -27,7 +27,7 @@
             <a href="/">Home</a>
         </div>
         <div class="humburger-menu_container">
-            <div class="humburger-icon" role="button" tabindex="0" on:keydown on:click={handleHumClick} on:blur={() => setTimeout(() =>mobileMenuExtend=false, 300)}>
+            <div class="humburger-icon" class:close={mobileMenuExtend} role="button" tabindex="0" on:keydown on:click={handleHumClick} on:blur={() => setTimeout(() =>mobileMenuExtend=false, 300)}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,6 +95,19 @@
         width: 100%;
         height: 2px;
         background-color: black;
+        transition: all 0.3s ease-out;
+    }
+
+    .humburger-icon.close span:nth-child(1) {
+        transform: rotate(45deg) translate(10px, 6px)
+    }
+
+    .humburger-icon.close span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .humburger-icon.close span:nth-child(3) {
+        transform: rotate(-45deg) translate(10px, -6px);
     }
 
     .mob-nav-container {
@@ -106,6 +119,7 @@
         text-align: center;
         transform: translateX(-33%);
         background-color: white;
+        z-index: 9;
     }
 
     .nav-list_mob {

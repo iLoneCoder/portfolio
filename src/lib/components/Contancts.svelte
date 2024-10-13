@@ -117,5 +117,10 @@
         .linkedin a {
             font-size: 1rem;
         }
+
+        .email div,
+        .linkedin a {
+            text-underline-offset: 0.7rem !important;
+        }
     }
 </style>
