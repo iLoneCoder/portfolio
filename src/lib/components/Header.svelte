@@ -26,8 +26,8 @@
         <div class="logo">
             <a href="/">Home</a>
         </div>
-        <div class="humburger-menu_container">
-            <div class="humburger-icon" class:close={mobileMenuExtend} role="button" tabindex="0" on:keydown on:click={handleHumClick} on:blur={() => setTimeout(() =>mobileMenuExtend=false, 300)}>
+        <div class="hamburger-menu_container">
+            <div class="hamburger-icon" class:close={mobileMenuExtend} role="button" tabindex="0" on:keydown on:click={handleHumClick} on:blur={() => setTimeout(() =>mobileMenuExtend=false, 300)}>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -79,34 +79,34 @@
         font-size: 1.5rem;
     }
 
-    .humburger-menu_container {
+    .hamburger-menu_container {
         position: relative;
         cursor: pointer;
     }
 
-    .humburger-icon {
+    .hamburger-icon {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 30px;
         height: 25px;
     }
-    .humburger-icon span {
+    .hamburger-icon span {
         width: 100%;
         height: 2px;
         background-color: black;
         transition: all 0.3s ease-out;
     }
 
-    .humburger-icon.close span:nth-child(1) {
+    .hamburger-icon.close span:nth-child(1) {
         transform: rotate(45deg) translate(10px, 6px)
     }
 
-    .humburger-icon.close span:nth-child(2) {
+    .hamburger-icon.close span:nth-child(2) {
         opacity: 0;
     }
 
-    .humburger-icon.close span:nth-child(3) {
+    .hamburger-icon.close span:nth-child(3) {
         transform: rotate(-45deg) translate(10px, -6px);
     }
 
