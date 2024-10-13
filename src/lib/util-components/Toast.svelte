@@ -18,6 +18,7 @@
         padding: 5px 15px;
         border-radius: 2rem;
         transition: all 0.30s linear;
+        z-index: 9;
     }
 
     .show {
