@@ -4,6 +4,10 @@
     import arrow from "$lib/assets/svg/arrow.svg";
     import Button from '$lib/util-components/Button.svelte';
     import ArrowDown from '$lib/util-components/ArrowDown.svelte';
+    import houseMarket from "$lib/assets/images/house_market.png";
+    import supportDesk from "$lib/assets/images/support_desk.png";
+    import bookApp from "$lib/assets/images/bookApp.png";
+    import githubFinder from "$lib/assets/images/githubFinder.png";
 
     let options = { align: "start"}
 
@@ -13,40 +17,36 @@
 
     let projects = [
         {
-            image: "/src/lib/assets/images/project-1.png",
-            alt: "project-1",
-            title: "Project one",
-            github: ""
+            image: houseMarket,
+            alt: "House market",
+            title: "House market",
+            preview: true,
+            github: "https://github.com/iLoneCoder/house-market",
+            visit: "https://house-market-beryl.vercel.app/"
         },
         {
-            image: "/src/lib/assets/images/project-2.png",
-            alt: "project-2",
-            title: "Project two",
-            github: ""
+            image: supportDesk,
+            alt: "Support desk",
+            title: "Support desk",
+            preview: false,
+            github: "https://github.com/iLoneCoder/support-desk",
+            visit: ""
         },
         {
-            image: "/src/lib/assets/images/project-3.png",
-            alt: "project-3",
-            title: "Project Three",
-            github: ""
+            image: bookApp,
+            alt: "Book app",
+            title: "Book app",
+            preview: false,
+            github: "https://github.com/iLoneCoder/bookApp",
+            visit: ""
         },
         {
-            image: "/src/lib/assets/images/project-1.png",
-            alt: "project-4",
-            title: "Project fourth",
-            github: ""
-        },
-        {
-            image: "/src/lib/assets/images/project-1.png",
-            alt: "project-5",
-            title: "Project fifth",
-            github: ""
-        },
-        {
-            image: "/src/lib/assets/images/project-1.png",
-            alt: "project-6",
-            title: "Project sixth",
-            github: ""
+            image: githubFinder,
+            alt: "Github finder",
+            title: "Github finder",
+            preview: true,
+            github: "https://github.com/iLoneCoder/github-finder",
+            visit: "http://github-finder-kappa-two.vercel.app/"
         }
     ]
     
@@ -83,7 +83,10 @@
         <div class="embla__container">
             {#each projects as project, index (index)}
                 <div class="embla__slide">
-                    <div class="project-card">
+                    <div 
+                        class="project-card"
+                        class:adjust-card={!project.preview}
+                        >
                         <div class="card-img">
                             <img src={project.image} alt={project.alt}>
                         </div>
@@ -93,7 +96,10 @@
                         </div>
 
                         <div class="card-buttons">
-                            <Button border={"light"}>Github</Button>
+                            <a href={project.github} target="_blank" class="project-url">Github</a>
+                            {#if project.preview}
+                                <a href={project.visit} target="_blank" class="project-url">Visit</a>
+                            {/if}
                         </div>
                     </div>
                 </div>
@@ -212,6 +218,42 @@
         cursor: default;
     }
 
+    .card-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .project-url {
+        text-decoration: none;
+        color: #000;
+        padding: 0.8rem 1rem;
+        border: 1px solid rgba(51, 51, 51, 0.745);
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        text-align: center;
+        width: 5rem;
+        transition: all 0.3s;
+    }
+
+    .project-url:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    @media (max-width: 1360px) {
+        .adjust-card {
+            padding-bottom: 84px;
+        }
+        .card-buttons {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 1240px) {
+        .card-title h3 {
+            font-size: 1.5rem;
+        }
+    }
 
     @media (max-width: 1200px) {
         .projects {
