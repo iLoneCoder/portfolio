@@ -57,7 +57,7 @@
         list-style-type: none;
         padding-left: 0;
         display: flex;
-        gap: 4rem;
+        gap: 6rem;
         animation: scroll 22s linear infinite;
     }
 
@@ -67,7 +67,7 @@
 
     @keyframes scroll {
         to {
-            transform: translate(calc(-50% - 2rem))
+            transform: translate(calc(-50% - 3rem))
         }
     }
 </style>

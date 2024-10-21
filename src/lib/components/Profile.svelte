@@ -5,7 +5,9 @@
     import Button from "$lib/util-components/Button.svelte";
     import StackCarousel from "$lib/util-components/StackCarousel.svelte";
     import meWebp from "/src/lib/assets/images/me.webp";
-    import meJpg from "/src/lib/assets/images/me.jpg"
+    import meJpg from "/src/lib/assets/images/me.jpg";
+    import telegram from "$lib/assets/svg/telegram.svg";
+    import whatsup from "$lib/assets/svg/whatsapp.svg";
 
     function handleClick() {
         goto("#contacts", {replaceState: true, noScroll: false})
@@ -34,10 +36,13 @@
             </div>
             
             <div class="socials-container">
-                <a href="https://www.linkedin.com/in/giorgi-shagidze-716623218/" target="_blank">
+                <a href="https://www.linkedin.com/in/giorgi-shagidze-716623218/" target="_blank" title="Linkedin">
                     <img src={linkedin} alt="linkdin">
                 </a>
-                <a href="https://github.com/iLoneCoder" target="_blank">
+                <a href="https://t.me/gshagi" target="_blank" title="Telegram">
+                    <img src={telegram} alt="telegram" style="width: 31px;">
+                </a>
+                <a href="https://github.com/iLoneCoder" target="_blank" title="Github">
                     <img src={github} alt="github">
                 </a>
             </div>
