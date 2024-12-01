@@ -8,6 +8,7 @@
     import supportDesk from "$lib/assets/images/support_desk.png";
     import bookApp from "$lib/assets/images/bookApp.png";
     import githubFinder from "$lib/assets/images/githubFinder.png";
+    import todoApp from "$lib/assets/images/todo_app.jpg";
 
     let options = { align: "start"}
 
@@ -16,6 +17,14 @@
     let isPrevDisabled = true
 
     let projects = [
+        {
+            image: todoApp,
+            alt: "Todo app",
+            title: "Todo app",
+            preview: false,
+            github: "https://github.com/iLoneCoder/todots",
+            visit: ""
+        },
         {
             image: houseMarket,
             alt: "House market",
