@@ -9,6 +9,7 @@
     import bookApp from "$lib/assets/images/bookApp.png";
     import githubFinder from "$lib/assets/images/githubFinder.png";
     import todoApp from "$lib/assets/images/todo_app.jpg";
+    import simpleChat from "$lib/assets/images/simple_chat.jpg";
 
     let options = { align: "start"}
 
@@ -17,6 +18,14 @@
     let isPrevDisabled = true
 
     let projects = [
+        {
+            image: simpleChat,
+            alt: "Simple chat",
+            title: "Simple chat",
+            preview: false,
+            github: "https://github.com/iLoneCoder/simple_chat",
+            visit: ""
+        },
         {
             image: todoApp,
             alt: "Todo app",
